@@ -1,0 +1,35 @@
+.fxs_custom_notification {
+    position: relative;
+}
+
+.fxs_custom_notification_body {
+    background-color: yellow;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    padding: 2rem 1rem 1rem;
+    transition: all 2s ease-in-out;
+}
+
+@media(min-width:768px) {
+    .fxs_custom_notification_body {
+        left: -100vw;
+    }
+}
+
+.fxs_custom_notification_close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+}
+
+.fxs_top_left {
+    top: 10vh;
+    left: 10vw;
+}
+
+.fxs_top {
+    top: 10vh;
+    left: 0;
+}
