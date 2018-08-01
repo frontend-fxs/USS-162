@@ -13,6 +13,7 @@
 
 @media(min-width:768px) {
     .fxs_custom_notification_body {
+        top: 0;
         left: -100vw;
     }
 }
@@ -32,4 +33,9 @@
 .fxs_top {
     top: 10vh;
     left: 0;
+}
+
+.fxs_left {
+    top: 0;
+    left: 10vh;
 }
