@@ -2,40 +2,99 @@
     position: relative;
 }
 
+.fxs_custom_notification_close {
+    background: transparent;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.fxs_custom_notification_accept {
+    width: 100%;
+}
+
+@-webkit-keyframes AppearFromLeft {
+    0% {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+    }
+    100% {
+        position: fixed;
+        left: 0;
+        top: 50px;
+    }
+}
+
+@keyframes AppearFromLeft {
+    0% {
+        position: fixed;
+        left: -100%;
+        right: initial;
+        top: 121px;
+    }
+    100% {
+        position: fixed;
+        left: 0;
+        right: initial;
+        top: 121px;
+    }
+}
+
+@-webkit-keyframes AppearFromTop {
+    0% {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: -100%
+    }
+    100% {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 50px;
+    }
+}
+
+@keyframes AppearFromTop {
+    0% {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: -100%
+    }
+    100% {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 50px;
+    }
+}
+
 .fxs_custom_notification_body {
-    background-color: yellow;
     position: fixed;
-    top: -100vh;
     left: 0;
     right: 0;
-    padding: 2rem 1rem 1rem;
-    transition: all 2s ease-in-out;
-    border: 1px solid #dddedf;
+    top: -100%;
+    padding-bottom: 1rem;
 }
 
 @media(min-width:768px) {
     .fxs_custom_notification_body {
-        top: 50px;
-        left: -100vw;
-        right: auto;
+        position: fixed;
+        left: -100%;
+        right: initial;
+        top: 121px;
+        padding-bottom: 0;
     }
 }
 
-.fxs_custom_notification_close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: transparent;
+.fxs_custom_notification_animation {
+    animation: AppearFromTop 1s ease-in-out 1s 1 normal forwards;
 }
 
-.fxs_custom_notification_transition {
-    top: 50px;
-    left: 0;
-}
-
-@media(min-width:1024px) {
-    .fxs_custom_notification_transition {
-        top: 121px;
-        left: 0;
+@media(min-width:768px) {
+    .fxs_custom_notification_animation {
+        animation: AppearFromLeft 1s ease-in-out 1s 1 normal forwards;
     }
 }
